@@ -1,0 +1,7 @@
+services:
+  slack-paper-bot:
+    build: .
+    env_file: .env
+    volumes:
+      - ./data:/app   # papers.db を永続化
+    restart: unless-stopped
